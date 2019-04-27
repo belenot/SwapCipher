@@ -1,0 +1,31 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+	  <groupId>com.belenot.mgupi.practice</groupId>
+	  <artifactId>practice-project</artifactId>
+	  <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>swap-cipher-executable</artifactId>
+  <packaging>pom</packaging>
+
+  <dependencies>
+	<dependency>
+	  <groupId>${parent.groupId}</groupId>
+	  <artifactId>swap-cipher</artifactId>
+	  <version>${parent.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>${parent.groupId}</groupId>
+	  <artifactId>swap-cipher-gui</artifactId>
+	  <version>${parent.version}</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+	<plugins>
+	  <plugin>
+		<artifactId>maven-assembly-plugin</artifactId>
+	  </plugin>
+	</plugins>
+  </build>
+</project>
