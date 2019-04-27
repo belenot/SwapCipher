@@ -13,5 +13,38 @@
 	<module>swap-cipher</module>
 	<module>swap-cipher-gui</module>
   </modules>
-  
+
+  <profiles>
+	<profile>
+	  <id>executable-jar</id>
+	  <activation>
+		<activeByDefault>false</activeByDefault>
+	  </activation>
+	  <build>
+	  <plugins>
+		<plugin>
+		  <artifactId>maven-assembly-plugin</artifactId>
+		  <executions>
+			<execution>
+			  <phase>package</phase>
+			  <goals>
+				<goal>single</goal>
+			  </goals>
+			  <configuration>
+				<descriptorRefs>
+				  <descriptorRef>jar-with-dependencies</descriptorRef>
+				</descriptorRefs>
+				<archive>
+				  <manifest>
+					<mainClass>com.belenot.mgupi.practice.SwapCipherGUI</mainClass>
+				  </manifest>
+				</archive>
+			  </configuration>
+			</execution>
+		  </executions>
+		</plugin>
+	  </plugins>
+	  </build>
+	</profile>
+  </profiles>
 </project>
